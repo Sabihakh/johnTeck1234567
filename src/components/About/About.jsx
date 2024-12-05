@@ -11,7 +11,7 @@ const About = () => {
     document.documentElement.setAttribute("lang", lang);
   }, [i18n.language]); // Re-run when the language changes
   return (
-        <div className="aboutus" dir="rtl">
+        <div className="aboutus" >
         <p className="text4" >
           <span id="H3">
             {t("Title")}
