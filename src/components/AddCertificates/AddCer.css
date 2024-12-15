@@ -1,0 +1,135 @@
+/* Overlay لإغلاق النافذة عند النقر على الخلفية */
+.modal-cer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(240 243 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* النافذة نفسها */
+  .modal-content-cer {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+ 
+  
+ /* Overlay لإضافة خلفية معتمة عند عرض النافذة */
+.modal-cer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* النافذة الرئيسية */
+  .modal-content-cer {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  /* الزر لإغلاق النافذة */
+  .close-cer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .close-cer:hover {
+    color: #e74c3c;
+  }
+  
+  /* صندوق تحميل الملفات */
+  .upload-box {
+    border: 2px dashed #87b6cf;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+  }
+  
+  .upload-box:hover {
+    border-color: #3498db;
+  }
+  
+  /* زر الحفظ */
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* حركة بسيطة عند ظهور النافذة */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @media (max-width: 600px) {
+    .modal-content-cer {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .upload-box {
+      max-width: 250px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  

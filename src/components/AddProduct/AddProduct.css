@@ -1,22 +1,42 @@
 .add {
-  border-radius: 30px;
-  border: none;
-  position: absolute;
-  top: 12%;
-  left: 75%;
-  background-color: rgba(218, 227, 243);
+  position: fixed; /* لجعل العنصر دائمًا في نفس المكان بالنسبة للشاشة */
+  top: 20%; /* تحديد الموضع العمودي بالنسبة إلى أعلى الشاشة */
+  left: 50%; /* تحديد الموضع الأفقي في منتصف العرض */
+  transform: translateX(-50%); /* محاذاة الزر ليتوسط الشاشة أفقياً */
+  background-color: rgba(218, 227, 243, 0.9); /* تحسين الخلفية بلون شفاف */
   display: flex;
   align-items: center;
-  cursor: pointer;
-  justify-content: space-between;
-  padding: 0px 1%;
-  margin: 5% 3%;
-  border: none;
+  justify-content: center;
+  padding: 1rem 2rem; /* مسافة داخلية مناسبة */
+  border: none; /* إزالة الإطار */
+  border-radius: 30px; /* حواف دائرية */
+  cursor: pointer; /* شكل مؤشر الفأرة */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* ظل لإضافة عمق */
+  transition: all 0.3s ease; /* تأثير عند التفاعل */
 }
+
 .add:hover {
-  color: azure;
-  background-color: #92aaac;
+  background-color: rgba(173, 216, 230, 1); /* لون مميز عند التحويم */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* تأثير إضافي */
+  transform: translateX(-50%) scale(1.05); /* تكبير بسيط */
 }
+
+/* تصميم متجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .add {
+    padding: 0.8rem 1.5rem; /* تقليل المسافة الداخلية */
+    font-size: 14px; /* تقليل حجم النص */
+  }
+}
+
+@media (max-width: 480px) {
+  .add {
+    padding: 0.6rem 1rem; /* مزيد من التبسيط للشاشات الصغيرة جدًا */
+    font-size: 12px;
+  }
+}
+
+
 
 h2 {
   margin-left: 14px;
@@ -58,6 +78,7 @@ h2 {
   margin: -1%;
   padding: 1%;
   overflow: hidden;
+  overflow-x: auto;
   overflow-y: auto; /* تفعيل التمرير العمودي */
   max-height: calc(70vh - 60px); /* تحديد ارتفاع محتوى التمرير */
 }
@@ -211,7 +232,7 @@ h2 {
   }
   .p3 {
     position: absolute;
-        bottom: 3%;
+        bottom: 1%;
         left: 29%;
         gap: 86%;
         margin: 0%;
@@ -238,7 +259,7 @@ h2 {
   }
   .p3 {
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 31%;
     gap: 54%;
     margin: 0%;

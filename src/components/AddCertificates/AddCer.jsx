@@ -5,15 +5,20 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./AddCer.css";
 
-const AddCer = ({onAdd , close , navigate}) => {
+const AddCer = ({ onAdd, navigate }) => {
   const [showModal, setShowModal] = useState(false);
   const [image, SetImage] = useState("");
   const [pdf, SetPdf] = useState("");
 
+  // فتح النافذة
   const handleOpenModal = () => setShowModal(true);
 
+  // إغلاق النافذة
+  const handleCloseModal = () => setShowModal(false);
+
+  // وظيفة حفظ الشهادة
   async function savecertifi(e) {
-    e.preventDefault(e);
+    e.preventDefault();
     const formData = new FormData();
     if (image instanceof File) {
       formData.append("image", image);
@@ -32,36 +37,37 @@ const AddCer = ({onAdd , close , navigate}) => {
         }
       );
       if (res.status === 200) {
-        // بعد حفظ البيانات بنجاح، نقوم بتحديث المنتجات
-        const newCer = res.data; // نحصل على المنتج الجديد من الاستجابة
+        const newCer = res.data;
         onAdd(newCer);
-        close();
-        // الانتقال إلى صفحة Dashboard
+        handleCloseModal();
         navigate("/Dashboardcertificates", { replace: true });
       }
     } catch (err) {
-      console.log(err); // طباعة الخطأ في وحدة التحكم
+      console.log(err);
     }
   }
+
   return (
     <div>
-      <Link to="#" onClick={handleOpenModal}>
-        Add New Certificates
+      <button className="add" onClick={handleOpenModal}>
+        <h2>Add New Certificates</h2>
         <FontAwesomeIcon icon={faPlus} size="2x" />
-      </Link>
+      </button>
       <div className="App">
         {showModal && (
-          <div className="modal">
-            <div className="modal-content">
-              <span className="close" onClick={close}>
+          <div className="modal-cer-overlay" onClick={handleCloseModal}>
+            <div
+              className="modal-content-cer"
+              onClick={(e) => e.stopPropagation()} // منع الإغلاق عند النقر داخل النافذة
+            >
+              <span className="close-cer" onClick={handleCloseModal}>
                 &times;
               </span>
-
               <div>
                 <div className="upload-box">
                   <input
                     type="file"
-                    onChange={(e) => SetImage(e.target.files[0])} // تمرير الملف إلى الحالة
+                    onChange={(e) => SetImage(e.target.files[0])}
                   />
                   <div>
                     <FontAwesomeIcon
@@ -79,7 +85,7 @@ const AddCer = ({onAdd , close , navigate}) => {
                   <input
                     type="file"
                     accept=".pdf"
-                    onChange={(e) => SetPdf(e.target.files[0])} // تمرير الملف إلى الحالة
+                    onChange={(e) => SetPdf(e.target.files[0])}
                   />
                   <div>
                     <FontAwesomeIcon
@@ -105,4 +111,5 @@ const AddCer = ({onAdd , close , navigate}) => {
     </div>
   );
 };
+
 export default AddCer;
