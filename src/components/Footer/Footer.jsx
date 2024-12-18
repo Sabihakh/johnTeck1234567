@@ -48,17 +48,15 @@ function Footer() {
           <Link to="mailto:export@johntekvalves.com" className="linkk">
             <h5 className="h3footer em">export@johntekvalves.com</h5>
           </Link>
-          <Link to="tel:+0981398162735" className="linkk">
-            <h5 className="h3footer em" dir="ltr">+0981398162735</h5>
+          <Link to="tel:+34 960035373" className="linkk">
+            <h5 className="h3footer em" dir="ltr">+34 960035373</h5>
           </Link>
         </div>
       </div>
       <div className="lastfooter">
         <h6>JohntekValves.com © 2024 All Rights Reserved. </h6>
         <h6>S.L.Camino Pascualeta 23,46200 Paiporta , Valencia ,Spain</h6>
-        <h6>made by <a href="www.example.com"target="_blank"
-              rel="noopener noreferrer" style={{color:"red"}}
-            > RAYS_Tech </a> </h6>
+      
       </div>
     </div>
   );

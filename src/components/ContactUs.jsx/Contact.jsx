@@ -33,7 +33,7 @@ const Contact = () => {
         <FontAwesomeIcon icon={faPhone} size="2x" className="icon" />
         <p className="contact-title">Phone</p>
         <a  target="_blank"
-        rel="noopener noreferrer" href="tel:+0981398162735" className="contact-link">+0981398162735 </a>
+        rel="noopener noreferrer" href="tel:+34 960035373" className="contact-link">+34 960035373 </a>
       </div>
     </div>
   );

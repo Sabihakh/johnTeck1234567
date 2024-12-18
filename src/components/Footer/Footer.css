@@ -65,6 +65,9 @@
   justify-content: space-between;
   padding: 0 2%;
 }
+.lastfooter h6 {
+  font-size: 6px;
+}
 }
 /* جوالات  كبيرة */
 @media (width<= 768px) and (width> 480px)  {

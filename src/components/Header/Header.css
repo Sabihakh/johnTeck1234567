@@ -2,11 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #DAE3F3  ;
+  background-color: #dae3f3;
   opacity: 1;
   box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
   padding: 0px 2%;
-  
 }
 
 .logo img {
@@ -18,7 +17,19 @@
   display: flex;
   gap: 20px;
 }
-
+.searchdivAR {
+  position: absolute;
+}
+.forsearchH {
+  display: flex;
+  align-items: center;
+}
+.forsearchAr {
+  position: absolute;
+  left: 52px;
+  /* right: -436px;
+  background-color: red; */
+}
 .linksss {
   text-decoration: none;
   color: #333;
@@ -32,23 +43,24 @@
   border-radius: 5px;
 }
 
-.forsearchH {
-  display: flex;
-  align-items: center;
-}
-
 .inputname {
-  padding:20px 50px 20px 20px;
+  padding: 20px 50px 20px 20px;
   border: 1px solid #ccc;
   border-radius: 29px;
   /* margin-right: 10px; */
   background-color: rgba(1, 1, -1, 0.1);
 }
 .arinp {
-  margin: 0% 543% 0% 0%;
+  margin-right: 970px;
+  margin-top: 50px;
 }
-.eninp{
-  margin-right: 10px;
+.eninp {
+  margin-right: 8px;
+  margin-top: 50px;
+}
+.enok {
+  margin-right: -12px;
+  margin-top: 52px;
 }
 .bsearch {
   background-color: #333;
@@ -63,77 +75,111 @@
   background-color: #555;
 }
 /* Media Queries لتحسين التوافق مع أحجام الشاشات المختلفة */
+
+.searchdiv {
+  position: absolute;
+  /* bottom: 10px; */
+  top: 16%;
+
+  right: 0%;
+  display: flex;
+  margin-top: 0%;
+}
+.ok {
+  position: absolute;
+  right: 8%;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: #867e7e;
+  /* font-size: large; */
+}
+.selectlinksss {
+  background: none;
+  border: 0;
+}
+.selectlinksss:hover {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
 @media (max-width: 768px) {
   .header {
-    display: none; }}
+    display: none;
+  }
+}
 
-  .searchdiv{
+@media (width<= 480px) {
+  #hoom {
+    margin: 0px 0px 9px -20px;
+  }
+  .linksss {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 11px;
+  }
+}
+@media (width <=768px) and (width>480px) {
+  .linksss {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 11px;
+  }
+}
+@media (width <=1024px) and (width>768px) {
+  #hoom {
+    margin: -9px 2px 25px -35px;
+  }
+  .linksss {
+    text-decoration: none;
+    color: #333;
+    font-size: 11px;
+    padding: 9px 5px 8px 2px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .forsearchAr {
+    left: 52px;
+    right: -436px;
+  }
+  .arinp {
     position: absolute;
-    /* bottom: 10px; */
-    top: 16%;
+    right: 208%;
+    top: 70px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+.arok {
+  position: absolute;
+  top: 57px;
+  right: 208%;
+  z-index: 1;
+}
+  
+}
+@media (width>=1025px) and (width<= 1920px) {
+  .linksss {
+    text-decoration: none;
+    color: #333;
+    padding: 4px 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .forsearchAr {
+    left: 52px;
+    right: -436px;
+  }
+  .arok {
+    position: absolute;
+    top: 100%;
+    right: 252%;
+   
+    z-index: 1;
 
-    right: 0%;
-    display: flex;
-    margin-top: 0%;
-  }
-  .ok{
-    position: absolute;
-    right: 8%;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    color: #867e7e;
-    /* font-size: large; */
-  }
-  .enok{
-    margin-right: 10px;
-  }
-  .arok{
-    margin: 0% 543% 0% 0%;
-  }
-  .selectlinksss{
-    background: none;
-    border: 0;
-  }
-  .selectlinksss:hover {
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-  }
-  @media (width<= 480px) {
-    #hoom {
-      margin: 0px 0px 9px -20px;
-    }
-    .linksss {
-      text-decoration: none;
-      font-weight: bolder;
-      font-size: 11px;
-    }
-  }
-  @media (width <=768px) and (width>480px) {
-    .linksss {
-      text-decoration: none;
-      font-weight: bolder;
-      font-size: 11px;
-    }
-  }
-  @media (width <=1024px) and (width>768px) {
-    #hoom {
-      margin: -9px 2px 25px -35px;
-    }
-    .linksss {
-      text-decoration: none;
-      color: #333;
-      font-size: 11px;
-      padding: 9px 5px 8px 2px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-  }
-  @media (width>=1025px) and (width<= 1920px) {
-    .linksss {
-      text-decoration: none;
-      color: #333;
-      padding: 4px 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-  }
+}
+.arinp {
+  position: relative;
+  bottom: -68px;
+  margin-top: 0px;
+
+}
+}

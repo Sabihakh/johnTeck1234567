@@ -50,13 +50,13 @@ function MainDash() {
         value={password}
         onChange={(event) => setPassword(event.target.value)}
       />
-      <button type="submit" onClick={(e) => req(e)}> ok </button>
-       {/* أيقونة لإظهار أو إخفاء الباسوورد */}
-       <i 
+      {/* أيقونة لإظهار أو إخفاء الباسوورد */}
+      <i 
         className={`fa-solid ${showPassword ? "fa-eye" : "fa-eye-slash"}`}
         onClick={() => setShowPassword(!showPassword)} // عند الضغط يتم تبديل الحالة
-        style={{ cursor: "pointer", marginRight: "10px" }}
+        style={{ cursor: "pointer", marginRight: "10px" , marginLeft: "-33px"}}
       ></i>
+      <button type="submit" onClick={(e) => req(e)} className="styleokmain"> ok </button>
       </form>
     </div>
  </>

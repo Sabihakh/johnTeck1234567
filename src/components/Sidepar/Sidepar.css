@@ -72,10 +72,9 @@
   cursor: pointer;
 }
 .aroks {
-  margin: -1% 79% 0% 0%;
+  background-color: aquamarine;
 }
-.enoks {
-}
+
 
 /* الشريط الجانبي في الشاشات الصغيرة */
 @media (max-width: 768px) {
@@ -104,9 +103,11 @@
     border-radius: 29px;
     background-color: rgba(1, 1, -1, 0.1);
   }
-  .okside {
-    top: 49%;
-    right: 1%;
+  .aroks {
+
+    right: 113px;
+    top: 2px;
+    background-color: aquamarine;
 }
 }
 @media (width<= 768px) and (width> 480px) {
@@ -117,8 +118,5 @@
     border-radius: 29px;
     background-color: rgba(1, 1, -1, 0.1);
   }
-  .okside {
-    top: 49%;
-    right: 37%;
-}
+  
 }
