@@ -27,8 +27,6 @@
 .forsearchAr {
   position: absolute;
   left: 52px;
-  /* right: -436px;
-  background-color: red; */
 }
 .linksss {
   text-decoration: none;
@@ -47,15 +45,10 @@
   padding: 20px 50px 20px 20px;
   border: 1px solid #ccc;
   border-radius: 29px;
-  /* margin-right: 10px; */
   background-color: rgba(1, 1, -1, 0.1);
 }
 .arinp {
   margin-right: 970px;
-  margin-top: 50px;
-}
-.eninp {
-  margin-right: 8px;
   margin-top: 50px;
 }
 .enok {
@@ -78,21 +71,20 @@
 
 .searchdiv {
   position: absolute;
-  /* bottom: 10px; */
   top: 16%;
-
   right: 0%;
   display: flex;
   margin-top: 0%;
 }
 .ok {
+  border-radius: 26px;
   position: absolute;
-  right: 8%;
+  right: 6%;
+  top: -74%;
   border: 0;
   background: none;
   cursor: pointer;
   color: #867e7e;
-  /* font-size: large; */
 }
 .selectlinksss {
   background: none;
